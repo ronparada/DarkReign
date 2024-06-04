@@ -1,87 +1,70 @@
-# DarkReign
-DarkReignAsciiNameGenerator2 is a tool for customizing player names in Dark Reign - The Future of War. It allows users to create ASCII-based names and updates the TACTICS.CFG file for use in-game, adding a personalized touch to the gaming experience.
-
 # DarkReignAsciiNameGenerator2
 
-DarkReignAsciiNameGenerator2 is a simple Python application that allows users to generate ASCII names for the legacy video game Dark Reign - The Future of War. The app modifies the player name in the `TACTICS.CFG` file to include ASCII characters.
+DarkReignAsciiNameGenerator2 is a tool for customizing player names in Dark Reign - The Future of War. It allows users to create ASCII-based names and updates the `TACTICS.CFG` file for use in-game, adding a personalized touch to the gaming experience.
 
 ## Features
 
-- Easy-to-use GUI for generating ASCII names
-- Supports ASCII characters from A to Z and numbers
-- Dynamically updates the player name in the `TACTICS.CFG` file
-
-## Prerequisites
-
-- Python 3.6 or higher
-- Required Python packages:
-  - cx_Freeze (for creating an executable)
-  - os
+- Generate ASCII-based player names
+- Update the `TACTICS.CFG` file with new names
+- Simple and user-friendly GUI
 
 ## Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/DarkReignAsciiNameGenerator2.git
-    cd DarkReignAsciiNameGenerator2
+    git clone https://github.com/ronparada/DarkReign.git
+    cd DarkReign
     ```
 
-2. Install the required packages:
-    ```bash
-    pip install cx_Freeze os
-    ```
+2. **Unzip the build.zip file:**
+    Extract the contents of `build.zip` to your desired location.
+
+3. **Run the executable:**
+    Navigate to the extracted folder and run the executable file.
 
 ## Usage
 
-1. Run the application:
+- Open the application and use the interface to generate and customize your player name with ASCII characters.
+- Save the new name to update the `TACTICS.CFG` file.
+
+## Files
+
+- `dark_reign_name_generator_grid.py`: The main Python script for the application.
+- `build.zip`: Contains the built executable and necessary files to run the application.
+
+## Requirements
+
+- Windows 10 or later
+- Python 3.11 (for running the script directly)
+
+## Building from Source
+
+If you prefer to build the executable yourself:
+
+1. **Install dependencies:**
     ```bash
-    python dark_reign_name_generator_grid.py
+    pip install cx_Freeze
     ```
 
-2. Use the GUI to generate your desired ASCII name and save it to the `TACTICS.CFG` file.
-
-## Building the Executable
-
-To create a standalone executable for the application:
-
-1. Create a `setup.py` file with the following content:
-    ```python
-    from cx_Freeze import setup, Executable
-
-    base = None
-
-    executables = [Executable("dark_reign_name_generator_grid.py", base=base)]
-
-    packages = ["idna", "os"]
-    options = {
-        'build_exe': {
-            'packages': packages,
-        },
-    }
-
-    setup(
-        name="DarkReignAsciiNameGenerator2",
-        options=options,
-        version="1.0",
-        description="Dark Reign Ascii Name Generator",
-        executables=executables
-    )
-    ```
-
-2. Run the following command to build the executable:
+2. **Run the build command:**
     ```bash
     python setup.py build
     ```
 
-3. The executable will be created in the `build` directory.
+3. **Find the executable:**
+    The built executable will be located in the `build` folder.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue if you have any suggestions or find any bugs.
+Feel free to fork the repository, make improvements, and submit pull requests.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License.
+
+---
+
+Feel free to adjust the GitHub repository URL in the clone command and any other details as needed.
 
 ## Contact
 
